@@ -29,7 +29,7 @@
                </div>            
                <nav class="menu">                  
                   <ul class="nav" id="menu">
-                     <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                     <li class="nav-item current"><a class="nav-link" href="#home">Home</a></li>
                      <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                      <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
                      <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
@@ -37,11 +37,9 @@
                      <li class="nav-item"><a class="nav-link" href="#news">News</a></li>
                      <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                   </ul>
-                  <div class="header__nav-button">
-                     <div class="menu-icon-wrapper">
-                        <div class="menu-icon"></div>
-                     </div>
-                  </div> 
+                  <div class="burger">
+                     <span></span>
+                  </div>
                </nav>
             </div>
             <h1 class="title-h1">i am&nbsp;<span>photographer</span></h1>
@@ -324,51 +322,18 @@
    </footer>
    <!-- jQuery -->
    <script src="libs/jquery-3.5.0.min.js"></script>
+   <!-- Script -->
    <script>
-      $(document).ready(function(){
-         $("#scroll, #menu").on("click","a", function (event) {
+      $("#scroll, #menu").on("click","a", function (event) {
          event.preventDefault();
          var id = $(this).attr('href'),
          top = $(id).offset().top;
          $('body,html').animate({scrollTop: top}, 1000);
-         });         
-         // function burgerMenu(selector) {
-         // let menu = $(selector);
-         // let button = menu.find('.burger-menu__button');
-         // let links = menu.find('.burger-menu__link');
-         // let overlay = menu.find('.burger-menu__overlay');
-         
-         // button.on('click', (e) => {
-         //    e.preventDefault();
-         //    toggleMenu();
-         // });
-         
-         // links.on('click', () => toggleMenu());
-         // overlay.on('click', () => toggleMenu());
-         
-         // function toggleMenu() {
-         //    menu.toggleClass('burger-menu_active');
-         //    if (menu.hasClass('burger-menu_active')) {
-         //          $('body').css('overflow', 'visible');
-         //    } else {
-         //          $('body').css('overflow', 'hidden');
-         //          }
-         //    }
-         // }
-         // burgerMenu ('.burger-menu');
-      document.querySelector('.menu-icon-wrapper').onclick = function(){
-      document.querySelector('.menu-icon').classList.toggle('menu-icon-active');
-      };
-
-         $('.header__nav-button').click(function(e) {
-            e.preventDefault();   
-            $('.burger-menu').toggleClass('show');
-         });
-         $('.nav-item').click(function(e) {
-            e.preventDefault();
-            $('.burger-menu').toggleClass('show');
-         });
-      });  
+      }); 
+      $(document).on("click", ".burger", function () {
+         $(".burger").toggleClass("close");
+         $(".nav").toggleClass("show");
+      }); 
    </script>
    </body>
 </html>
