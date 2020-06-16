@@ -37,12 +37,12 @@
 }
 .btn-scroll {
    display: block;
+   width: 26px;
+   height: 45px;
    background-color: transparent;
    border: none;
    outline: none;
-   display: block;
-   margin: 0 auto;
-   margin-bottom: 45px;  
+   margin: 0 auto 45px;
    text-align: center; 
    &:hover {
       animation: scroll 0.7s linear infinite alternate;

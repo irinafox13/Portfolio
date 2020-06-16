@@ -214,12 +214,12 @@ body {
 
 .btn-scroll {
   display: block;
+  width: 26px;
+  height: 45px;
   background-color: transparent;
   border: none;
   outline: none;
-  display: block;
-  margin: 0 auto;
-  margin-bottom: 45px;
+  margin: 0 auto 45px;
   text-align: center;
 }
 
@@ -1433,7 +1433,6 @@ body {
     margin-left: -15px;
     top: 0px;
     left: -100%;
-    /* возможность прокручивать меню на экране телефона */
     overflow-y: auto;
     z-index: 2;
     -webkit-transition: 0.5s;
@@ -1541,6 +1540,9 @@ body {
     -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-gap: 15px;
+  }
+  .service-item {
+    margin-top: 30px;
   }
   .service-item:nth-child(1) {
     -ms-grid-row: 1;
