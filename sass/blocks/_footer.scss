@@ -1,0 +1,36 @@
+.footer {
+   padding: 65px 0;
+   background-color: $dark;
+}
+.footer-block {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-gap: 20px;
+   &__copyright {
+      grid-area: 1/1/2/2;
+      color: $white;
+      font-weight: 300;
+      line-height: 1.5;
+      text-align: center;
+      &-link {
+         color: $white;
+         font-weight: 400;
+         &:hover {
+            border-bottom: 1px solid $white;
+         }
+      }
+   }
+   &__social {
+      grid-area: 1/2/2/3;
+      display: flex;      
+      justify-self: end;
+      .fab {
+         color: $white;
+         padding: 0 8px;
+         &:hover {
+            cursor: pointer;
+            color: $text;
+         }
+      }
+   }
+}

@@ -1,0 +1,42 @@
+.section-work {
+   padding: 98px 0 100px;
+   background-color: $dark;
+}
+.work {
+   @include flex-center;
+   flex-direction: column;
+   text-align: center;
+   &__text {
+      font-size: 22px;
+      font-weight: 400;
+      color: $white;
+      text-align: center;
+      flex-shrink: 5;
+   }
+   &__title {
+      color: $white;
+      margin-top: 17px;
+      margin-bottom: 10px;
+   }
+}
+.btn {
+   position: relative;
+   display: block;
+   width: 170px;
+   height: 45px;
+   background-color: $light;
+   color: $dark;
+   font-size: 16px;
+   font-weight: 400;
+   letter-spacing: 1px;
+   text-align: center;
+   line-height: 45px;
+   vertical-align: middle;
+   transition: color 0.3s ease-in-out,
+               box-shadow 0.8s ease-in-out;  
+} 
+ .btn:hover {
+   box-shadow:inset 0 0 0 300px $text;
+   color: $white;
+   
+} 

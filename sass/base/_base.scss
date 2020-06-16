@@ -1,0 +1,49 @@
+body, html {
+   height: 100%;
+}
+
+body {
+   font-family: $font-family;
+   font-size: $fsize;
+   overflow-x: hidden;
+}
+.main {
+   height: 100%;   
+   background: url(../img/bg.jpg) center center / cover no-repeat;
+}
+.container {
+   width: 100%;      
+   max-width: 1170px;
+   padding: 0 15px;
+   margin: 0 auto;
+}
+.title-h2 {
+   font-size: $fsize-h2;
+   font-weight: 500;
+   color: $dark;
+   padding-bottom: 20px;
+   text-transform: capitalize;
+}
+.title-h3 {
+   color: $dark;
+   font-size: 36px;
+   font-weight: 400;
+   text-align: center;
+   text-transform: capitalize;
+   padding-bottom: 23px;
+}
+.after-text {
+   color: $text;
+   font-weight: 400;
+   text-align: center;
+   padding-bottom: 65px;
+   line-height: 1.5;
+}
+@keyframes scroll {
+   from {
+      transform: translateY(0);
+   }
+   to {
+      transform: translateY(10px);
+   }
+}

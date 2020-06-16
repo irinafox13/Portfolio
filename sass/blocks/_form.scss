@@ -1,0 +1,85 @@
+.section-form {
+   padding: 125px 0;
+}
+.form {
+   @include flex-center; 
+   flex-direction: column;
+   .after-text {
+      padding: 0;
+      margin-bottom: 50px;
+   }
+
+   &-block {
+      max-width: 750px;
+      width: 100%;
+      @include flex-center; 
+      flex-direction: column;
+      &__input {
+         width: 100%;
+         border-bottom: 1px solid $border-input;
+         text-align: center;
+         font-size: 14px;
+         font-weight: 400;
+         padding: 15px;
+         margin-bottom: 17px;
+         color: $text;
+         &::-webkit-input-placeholder { /* Chrome */
+            color: $text;
+            opacity: 1; 
+            transition: opacity 0.3s ease;   
+         }
+         &:-ms-input-placeholder { /* IE 10+ */
+            color: $text;
+            opacity: 1; 
+            transition: opacity 0.3s ease;
+         }
+         &::-moz-placeholder { /* Firefox 19+ */
+            color: $text;
+            opacity: 1;
+            transition: opacity 0.3s ease;
+         }
+         &:-moz-placeholder { /* Firefox 4 - 18 */
+            color: $text;
+            opacity: 1;
+            transition: opacity 0.3s ease;
+         }
+      
+         &:focus {
+            border-bottom: 1px solid $dark;
+            &::-webkit-input-placeholder { /* Chrome */         
+               color: transparent;
+            }
+            &:-ms-input-placeholder { /* IE 10+ */
+               opacity: 0; 
+            }
+            &::-moz-placeholder { /* Firefox 19+ */
+               opacity: 0;
+            }
+            &:-moz-placeholder { /* Firefox 4 - 18 */
+               opacity: 0;
+            }
+         }
+                   
+      }
+      .textarea:focus {
+         color: transparent;
+      } 
+      &__btn {
+         display: block;
+         width: 100%;
+         height: 60px;
+         background-color: $dark;
+         color: $white;
+         font-size: 16px;
+         letter-spacing: 1px;
+         text-align: center;
+         margin-top: 20px;
+         transition: transform 0.3s ease-in-out,
+                     background-color 0.3s ease-in-out;
+         &:hover {
+            background-color: lighten($dark, 10%);
+            transform: scale(1.01, 1.01);
+         }
+      } 
+   }
+}

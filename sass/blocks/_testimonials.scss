@@ -1,0 +1,87 @@
+.section-testimonials {
+   padding: 125px 0 175px;
+}
+.testimonials__block {
+   display: grid;
+   grid-gap: 60px; 
+   -ms-grid-template-columns: 1fr 1fr;
+   grid-template-columns: 1fr 1fr;   
+   justify-content: space-between;  
+}
+.testimonials__item {
+   display: flex;
+   flex-direction: column;   
+   &:nth-child(1) {
+      align-self: start;
+      -ms-grid-column: 1;
+      -ms-grid-column-span: 1;      
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 1;      
+   }  
+   &:nth-child(2) {
+      align-self: start;
+      -ms-grid-column: 2;
+      -ms-grid-column-span: 1;      
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 1;      
+   } 
+   &-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 62px;
+      height: 100%;
+   }
+   &-block {
+      display: inline-block;
+      width: 80px;
+      height: 80px;
+      flex-shrink: 0;          
+      margin-right: 20px;
+      border-radius: 50%;  
+      overflow: hidden;        
+   }
+   &-image--1 {
+      max-width: 100%;
+      object-fit: contain;
+      object-position: 0 -7px;  
+   } 
+   &-image--2 {
+      max-width: 140%;
+      object-fit: contain;
+      object-position: -8px center;  
+   } 
+   &-subtitle {
+      color: $text;
+      font-size: 12px;
+      font-weight: 400;
+   }
+   .title-h4 {
+      padding-bottom: 10px;
+   }
+   &-text {
+      position: relative;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 18px;
+      color: $text;
+      padding-left: 30px;
+      line-height: 1.8;
+      &::before {
+         content: url(../img/quote.png);
+         width: 40px;
+         height: 40px;
+         position: absolute;
+         left: 30px;
+         top: -7px;
+      }
+   }
+}
+// @supports (grid-gap: 60px) {
+//    .service {
+//      grid-gap: 60px;
+//    }
+//    .service-item {
+//      margin-right: 0;
+//      margin-bottom: 0;
+//    }
+//  }
