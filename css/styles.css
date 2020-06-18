@@ -1349,6 +1349,7 @@ body {
     background-color: white;
     -webkit-transition: .3s linear;
     transition: .3s linear;
+    overflow: hidden;
   }
   .nav.show {
     visibility: visible;
